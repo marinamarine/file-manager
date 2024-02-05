@@ -42,3 +42,16 @@ export const isDirExist = async (path) => {
     }
     return false;
 };
+
+export const isFileExist = async (path) => {
+    try {
+        const stats = await fs.stat(path);
+
+        if (stats.isFile()) {
+            return true;
+        }
+    } catch (err) {
+        throw new Error('Invalid input')
+    }
+    return false;
+};

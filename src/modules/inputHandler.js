@@ -1,5 +1,6 @@
 import { systemInfo } from './systemInfo.js';
 import { list, navigation, navigationUp } from './navigation.js';
+import { createFile, readFile } from './filesOperations.js';
 
 const getOperationHandler = (operationCode) => {
     const operationHandlers = new Map([
@@ -7,6 +8,8 @@ const getOperationHandler = (operationCode) => {
         ['cd', navigation],
         ['ls', list],
         ['os', systemInfo],
+        ['cat', readFile],
+        ['add', createFile],
     ]);
     return operationHandlers.get(operationCode);
 };
