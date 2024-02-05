@@ -1,6 +1,7 @@
 import { systemInfo } from './systemInfo.js';
 import { list, navigation, navigationUp } from './navigation.js';
 import { createFile, deleteFile, readFile } from './filesOperations.js';
+import { calculateHash } from './hash.js';
 
 const getOperationHandler = (operationCode) => {
     const operationHandlers = new Map([
@@ -10,7 +11,9 @@ const getOperationHandler = (operationCode) => {
         ['os', systemInfo],
         ['cat', readFile],
         ['add', createFile],
-        ['rm', deleteFile]
+        ['rm', deleteFile],
+        ['hash', calculateHash],
+
     ]);
     return operationHandlers.get(operationCode);
 };
