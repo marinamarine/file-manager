@@ -28,3 +28,13 @@ export const createFile = async (basePath, args) => {
     });
     return basePath;
 };
+
+export const deleteFile = async (basePath, args) => {
+    const filePath = path.join(basePath, args);
+    try {
+        await fsPromises.unlink(filePath);
+    } catch {
+        throw new Error('Operation failed');
+    }
+    return basePath;
+};
