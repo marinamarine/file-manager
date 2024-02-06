@@ -1,0 +1,27 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "Repository conatins solution of the task https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/file-manager/assignment.md",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marinamarine/file-manager.git"
+  },
+  "keywords": [
+    "nodejs",
+    "rsschool"
+  ],
+  "author": "marinamarine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marinamarine/file-manager/issues"
+  },
+  "homepage": "https://github.com/marinamarine/file-manager#readme"
+}
